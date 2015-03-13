@@ -1554,3 +1554,11 @@ td.rich-table-cell  a {
 .inactiveDate {
 	background-color: gray;
 }
+input[type="checkbox"].pos_right {
+    position: relative;
+    left: 20px;
+}
+td.pos_right {
+    position: relative;
+    left: 20px;
+}
