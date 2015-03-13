@@ -1,0 +1,1556 @@
+/*
+    ----------------------------------------
+    Alberta C3P CSS
+    Sean Mitchell, sean@seanmitchell.ca
+    02 / 18 / 11
+    ----------------------------------------
+*/
+
+
+
+/* RESET
+---------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+:focus, input, select, textarea {
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+/* MESSAGES
+---------------------------------------- */
+.error {
+    color: red !important;
+    font-size: 11.5px;
+    margin-top: -3px;
+    padding-left: 8px;
+    padding-right: 0px !important;
+    text-align: left !important;
+    width: auto !important;
+}
+
+.message {
+	padding: 20px 0 !important;
+}
+
+.errormsg, .infomsg, .warnmsg {
+	list-style: none;
+	padding: 7px 0px 7px 12px;
+	color: #353535;
+}
+
+.errormsg {
+	background-color: #F6D6E4 !important;
+	border:1px solid red;
+}
+
+.infomsg {
+	background-color: lightgreen !important;	
+	border:1px solid green;
+}
+
+.warnmsg {
+	background-color: #F5DF4D !important;	
+	border:1px solid orange;
+}
+
+#messageList {
+	display: inline;
+    width: 400px;
+    float: left;
+}
+
+#messages ul {
+	padding: 0 0 0 0 !important;
+	float: left;
+}
+
+.rich-messages {
+    border: medium none !important;
+    clear: none !important;
+    display: inline-table !important;
+}
+
+/* BODY
+---------------------------------------- */
+body {
+    background: #BED600;
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    font-size: 13px;
+    font-smooth: always;
+    line-height: 20px;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    color: #2D68C2;
+    text-decoration: underline;
+}
+a:hover {
+    color: #000;
+}
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: bold;
+}
+hr {
+	background: #EEE;
+	color: #EEE;
+	height: 1px;
+	margin-bottom: 20px;
+}
+img {
+    display: block;
+}
+
+/* WRAP
+---------------------------------------- */
+#wrap {
+    margin: auto;
+    text-align: left;
+    width: 980px;
+}
+
+
+
+/* HEADER
+---------------------------------------- */
+#header {
+    background: url(img/header.png) 8px 0 no-repeat #FFF;
+    float: left;
+    width: 980px;
+}
+#header h1 {
+    float: left;
+    padding: 15px 0 34px 23px;
+    width: 193px;
+}
+#header h1 a {
+    background: url(img/logo.png) no-repeat;
+    display: block;
+    height: 37px;
+    width: 193px;
+}
+#header h1 a span {
+    display: none;
+}
+#header ul {
+    float: right;
+    font-size: 11px;
+    padding: 10px 24px 0 0;
+}
+#header ul li {
+    color: #FFF;
+    float: left;
+    padding-left: 12px;
+}
+#header ul li a {
+    color: #FFF;
+}
+#header ul li a:hover {
+    color: #CCC;
+}
+
+
+
+/* LOCATION
+---------------------------------------- */
+#location {
+    background: #FFF;
+    float: left;
+    width: 980px;
+}
+#location ul {
+    float: left;
+    font-size: 9px;
+    line-height: 47px;
+    padding-left: 24px;
+}
+#location ul li {
+    float: left;
+    padding-right: 12px;
+}
+#location ul li a {
+    color: #000;
+}
+#location ul li a:hover {
+    color: #2D68C2;
+}
+
+
+
+/* BAR
+---------------------------------------- */
+#bar {
+    background: url(img/bar.png) 23px 0 no-repeat #FFF;
+    float: left;
+    width: 980px;
+}
+#bar ul {
+    float: left;
+    padding: 9px 0 11px 36px;
+}
+#bar ul li {
+    background: url(img/arrow.png) 0 6px no-repeat;
+    float: left;
+    margin-left: 12px;
+    padding-left: 16px;
+}
+#bar ul li:first-child,
+#bar ul li.first-child {
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+#bar ol {
+    float: right;
+    padding: 9px 36px 11px 0;
+}
+#bar ol li {
+    background: url(img/divide.png) repeat-y;
+    float: left;
+    margin-left: 12px;
+    padding-left: 12px;
+}
+#bar ol li:first-child,
+#bar ol li.first-child {
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+#bar li {
+    color: #333;
+    line-height: 17px;
+}
+#bar li a {
+    color: #333;
+    display: inline-block;
+    text-decoration: none;
+}
+#bar li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+#bar li a.help {
+    background: url(img/help.png) right top no-repeat;
+    padding-right: 22px;
+}
+
+
+
+/* HEADLINE
+---------------------------------------- */
+#headline {
+    background: #FFF;
+    float: left;
+    padding: 0 24px 0 24px;
+    width: 932px;
+}
+#headline dl {
+    border-bottom: 2px solid #BED600;
+    float: left;
+    width: 932px;
+}
+#headline dl dt {
+    float: left;
+    padding-left: 12px;
+    padding-top: 31px;
+    padding-bottom: 10px;
+}
+#headline h2 {
+    color: #414770;
+    float: left;
+    font-size: 21px;
+    line-height: 21px;
+    padding: 0 10px 3px 0;
+}
+
+#headline ul {
+	background: #FAFAFA;
+	border: 1px solid #DCDCDC;
+    border-radius: 2px;
+	color: #333;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    float: left;
+    line-height: 29px;
+    margin: 0px 10px 0 0;
+    padding: 0 9px;
+    width: auto;
+}
+#headline ul li {
+    display: block;
+    float: left;
+}
+#headline ul li.date {
+    float: right;
+}
+#headline ul li a {
+	background: url(img/dateDisabled.png) center 8px no-repeat;
+    display: block;
+	height: 15px;
+    padding: 7px;
+	width: 16px;
+}
+#headline ul li a span {
+    display: none;
+}
+
+
+/*
+#headline ul {
+	background-color: #FAFAFA;
+	border: 1px solid #DCDCDC;
+    border-radius: 2px;
+	color: #333;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    float: left;
+    margin: 27px 10px 0 0;
+    width: 149px;
+}
+#headline ul li {
+    display: block;
+    float: left;
+}
+#headline ul li.date {
+    display: inline;
+    width: 140px;
+    float: right;
+}*/
+
+/* ADDED BY MOHAMMED */
+#headline input.rich-calendar-input { 
+	border: none;
+	background: transparent;
+	width: 109px;
+	padding: 6px 0 7px 0;
+}
+#headline img.rich-calendar-button  {
+	display: inline;
+	padding: 7px 7px 7px 7px;
+}
+
+#headline h3 {
+    background: url(img/pointer.png) left center no-repeat;
+    color: #414770;
+    float: left;
+    font-size: 21px;
+    line-height: 21px;
+    padding: 0 7px 3px 14px;
+}
+#headline .step {
+    background: #DCDCDC;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    color: #FFF;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 30px 6px 0 0;
+    text-align: center;
+    width: 24px;
+}
+#headline .stepped {
+    background: #414770;
+}
+#headline dl dd {
+    float: left;
+    padding: 29px 3px 0 0;
+}
+#headline dl dd fieldset {
+    clear: both;
+    display: block;
+    padding: 0;
+}
+#headline dl dd fieldset select {
+	border: 1px solid #DCDCDC;
+    border-radius: 2px;
+	color: #333;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    list-style: none;
+    font-size: 13px;
+    padding: 6px 1px;
+    width: 325px;
+}
+
+/* CONTENT
+---------------------------------------- */
+#content {
+    background: #FFF;
+    float: left;
+    padding: 24px 24px 4px 24px;
+    width: 932px;
+}
+#content.tabular {
+    padding-top: 0;
+}
+#content p {
+    padding-bottom: 20px;
+}
+#content ul {
+    list-style: disc;
+    padding: 0 0 20px 20px;
+}
+#content ol {
+    list-style-type: decimal;
+    padding: 0 0 20px 20px;
+}
+
+/* CONTET > MAIN MENU
+---------------------------------------- */
+#content #main-menu li {
+	list-style: none; padding: 7px;	
+}
+
+
+/* CONTENT > INPUTS
+---------------------------------------- */
+#content #inputs {
+    width: 620px;
+    margin: 0 auto;
+}
+
+#content #inputs.presentingissues_inputs  {
+    width: 800px;
+}
+
+#content #inputs.horizontal {
+	width: 466px;	
+}
+
+#content #inputs.search-inputs {
+	padding: 0 148px;	
+}
+
+#content #inputs dl {
+    border-bottom: 1px solid #EEE;
+    clear: both;
+    padding: 3px 0;
+}
+#content #inputs dl dt {
+    color: #414770;
+    float: left;
+    line-height: 25px;
+    padding-right: 10px;
+    text-align: right;
+    width: 140px;
+}
+
+#content #inputs dl dt.large {
+	width: 156px;
+}
+
+#content #inputs dl dt.small {
+	width: 105px;	
+}
+
+#content #inputs dl dt.dl-large {
+	width: 306px;
+}
+
+#content #inputs dl dd{
+	height: 25px;
+	white-space: nowrap;
+}
+#content #inputs dl dd input,
+#content #inputs dl dd textarea,
+#content div.table table.inputForm tr td input,
+#content div.table table.inputForm tr td textarea {
+	background: #FAFAFA;
+	border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+	color: #333;
+    float: left;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	font-size: 12px;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+	padding: 4px;
+	width: 200px;
+}
+#content #inputs dl dd input:focus,
+#content #inputs dl dd textarea:focus,
+#content div.table table.inputForm tr td input:focus,
+#content div.table table.inputForm tr td textarea:focus {
+	background: #FFF;
+	border: 1px solid #AAA;
+	padding: 4px;
+}
+#content #inputs dl dd input:disabled,
+#content #inputs dl dd textarea:disabled,
+#content div.table table.inputForm tr td input:disabled,
+#content div.table table.inputForm tr td textarea:disabled {
+	color: graytext;
+}
+
+#content div.table table.smallInputs tr td input {
+	width: 50px;
+}
+
+#content #inputs dl dd.radioPaged {
+	height: auto;	
+}
+
+#content #inputs dl dd.presentingIssues {
+	height: auto;	
+	padding-left:15px;
+}
+
+#content #inputs dl dd.presentingIssues table tr {
+	height: 25px;
+}
+
+#content #inputs dl dd input[type="radio"],
+#content #inputs dl dd input[type="checkbox"] {
+	margin-top: 6px;
+	width: 20px !important;
+	border: none;
+}
+
+#content #inputs dl dd label {
+	display: inline-block;
+    margin-top: 3px;
+    padding: 0 12px 0 2px;
+}
+
+#content #inputs p {
+    border-top: 1px solid #EEE;
+	padding: 12px 0 20px 150px;
+}
+
+#content #inputs ul.date {
+	background-color: #FAFAFA;
+	border: 1px solid #DCDCDC;
+    border-radius: 2px;
+	color: #333;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    float: right;
+    list-style: none;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    height: 24px !important;
+    float: left;
+}
+#content #inputs ul.date li{
+    display: inline;
+    float: left;
+    
+}
+
+#content #inputs img.rich-calendar-button  {
+	/*display: inline-table; */
+    vertical-align: top !important;
+    padding: 3px 0 0 2px;
+}
+
+#content #inputs select {
+	background-color: #FAFAFA;
+	border: 1px solid #DCDCDC;
+    border-radius: 2px;
+	color: #333;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    list-style: none;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-top: 2px;
+    min-width: 210px;
+    width: auto;
+    height: 25px !important;
+    float: left;
+}
+
+#content #inputs select.min-width-none {
+	min-width: 0 !important;
+}
+
+#content #inputs select[disabled] {
+	color: graytext;
+}
+#content #inputs table.programUserStatus {
+	float: left;
+}
+#content #inputs table.programUserStatus td {
+	padding: 3px 20px 0 1px;
+}
+#content #inputs table.programUserStatus input {
+	margin-top: 3px;
+	width: 10px;	
+}
+#content #inputs table.programUserStatus label {
+	padding-left: 5px
+}
+
+#content #selectClaimPeriod select,
+#content div.table table.inputForm tr td select {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    background-color: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+#content #selectClaimPeriod select {
+	margin: 19px 0 0;
+	width: 171px;
+}
+
+#content div.table table.inputForm tr td select {
+	width: 98%;
+	vertical-align: bottom;
+}
+
+#content #inputs dl dd table.select-radio-intable {
+	width: 83px;
+}
+
+#content #warnmsg {
+	background: url(img/warnmsg.png) left center no-repeat;
+	padding: 11px 0 23px 29px;
+}
+
+.disabledRadio {
+	color:graytext;
+}
+#content #inputs.presentingissues_inputs fieldset legend {
+    font-size:18px;
+}
+
+#content #inputs.presentingissues_inputs fieldset dl dd label {
+    font-weight: bold;
+}
+#content #inputs.presentingissues_inputs fieldset dl dd table label {
+    font-weight: normal;
+}
+
+/* CONTENT FIELDSETS * 
+---------------------------------------- */
+
+#content fieldset {
+	border: 1px solid black;
+	padding: 3px;
+	margin: 0 3px 20px  3px;
+}
+
+#content legend {
+	margin-left: 10px;
+}
+
+#content fieldset p {
+	border: medium none !important;
+    padding: 5px 0 0 12px !important;
+}
+
+/* PROGRAM USER STATUS 
+---------------------------------------- */
+#content #inputs.programUserStatus input {
+	width: 10px;	
+}
+
+#content #inputs.programUserStatus td {
+	width: 10px;	
+}
+/* CONTENT > DIV.TABLE
+---------------------------------------- */
+#content div.table {
+    float: left;
+    padding-bottom: 20px;
+    width: 100%;
+}
+#content div.table table {
+    border: none;
+    width: 100% !important;
+}
+
+#content div.table table.inputForm {
+	width: 100%;
+}
+
+#content div.table table.hasborder {
+    border-top: 2px solid #BED600;
+    margin: -2px 0 0 0;
+}
+
+#content div.table table th.rich-table-subheadercell,
+#content div.table table.inputForm th {
+    background: #FAFAFA;
+    border:none;
+    border-bottom: 1px solid #EEE;
+    color: #505050;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 9px 10px 10px 10px;
+    text-transform: uppercase;
+    white-space: normal;
+    text-align: center;
+}
+
+#content div.table table th.rich-table-subheadercell {
+	padding: 13px 10px;
+}
+#content div.table table td.rich-table-cell {
+	padding: 11px 10px 10px;
+}
+#content div.table table.inputForm th.half {
+	width: 50%;
+	padding-left: 13px;
+}
+
+#content div.table table.inputForm th.quarter {
+	width: 25%;	
+}
+
+/* CONTENT > DIV.SEARCHRESULTSTABLE
+---------------------------------------- */
+#content div.search-result-table {
+    float: left;
+  	padding: 10px 0 20px 0;
+  	width: 100%;
+}
+#content div.search-result-table table {
+    border: none;
+    margin: 0 auto;
+    width: 97%;
+}
+
+#content #inputs table.input-table dl dt.small {
+	width: 60px !important;
+}
+#content div.search-result-table table.input-table dl {
+	width: 241px !important;
+}
+
+#content div.search-result-table table.input-table dl.select-radio {
+	width: 242px !important;
+}
+
+#content div.search-result-table table.input-table dl dt {
+	width: 90px !important;
+}
+
+#content div.search-result-table table.input-table dl.select-radio dd input[type="radio"] {
+	margin-top: 5px !important;
+}
+
+#content div.search-result-table table.input-table dl.select-radio dd table {
+    width: 69%;
+}
+
+#content div.search-result-table table.input-table dl.select-radio dd label {
+	padding: 0 12px 0 0 !important;
+	margin-top: 2px !important;
+}
+
+#content div.search-result-table table.hasBorder {
+    border-top: 2px solid #BED600;
+}
+
+#content div.search-result-table table th.rich-table-subheadercell {
+    background: #FAFAFA;
+    border:none;
+    border-bottom: 1px solid #EEE;
+    color: #505050;
+    font-size: 10px;
+    font-weight: bold;
+   	padding: 13px 10px;	
+    text-transform: uppercase;
+    white-space: normal;
+    text-align: left;
+}
+
+#content div.search-result-table table td.rich-table-cell {
+    text-align: left;
+    padding: 11px 10px 10px;
+}
+
+/* CONTENT > DIV.TABLE > PAGES
+---------------------------------------- */
+#content div.table #pages {
+    clear: both;
+    width: 100%;
+}
+#content div.table #pages ul {
+    background: #FAFAFA;
+    border-bottom: 1px solid #EEE;
+    float: left;
+    padding: 12px 0 12px 0;
+    width: 100%;
+}
+#content div.table #pages ul li {
+    list-style: none;
+    padding: 0;
+}
+#content div.table #pages ul li.left {
+    float: left;
+    width: 25%;
+}
+#content div.table #pages ul li.left input {
+    margin: 0 0 0 12px;
+}
+#content div.table #pages ul li.middle {
+    color: #026890;
+    float: left;
+    line-height: 27px;
+    text-align: center;
+    width: 50%;
+}
+#content div.table #pages ul li.right {
+    float: right;
+    text-align: right;
+    width: 25%;
+}
+#content div.table #pages ul li.right input {
+    margin: 0 12px 0 0;
+}
+
+
+
+/* CONTENT > DIV.TABLE > CONTROLS
+---------------------------------------- */
+#content div.table #controls {
+    clear: both;
+    width: 100%;
+}
+#content div.table #controls ul {
+    float: left;
+    padding: 12px 0 0 0;
+    width: 100%;
+}
+#content div.table #controls ul li {
+    list-style: none;
+    padding: 0;
+}
+#content div.table #controls ul li.left {
+    float: left;
+}
+#content div.table #controls ul li.left input {
+    margin: 0 0 0 12px;
+}
+#content div.table #controls ul li.right {
+    float: right;
+/*     text-align: right; */
+}
+#content div.table #controls ul li.right input {
+/*     margin: 0 12px 0 0; */
+}
+
+
+
+/* INPUT.BUTTON
+---------------------------------------- */
+input.button {
+    background: url(img/button.png) repeat-x #177E9F;
+	border: 1px solid #0B6786;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 1px 1px #C8C8C8;
+    -moz-box-shadow: 0 1px 1px #C8C8C8;
+    -webkit-box-shadow: 0 1px 1px #C8C8C8;
+	color: #FFF;
+    cursor: pointer;
+    display: inline;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+    height: 27px;
+    margin-right: 12px;
+    padding: 0 9px 3px 9px;
+    text-shadow: 1px 1px 1px #064D70;
+    text-transform: uppercase;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+input.button:active {
+    position: relative;
+	top: 1px;
+}
+input.button:hover {
+    background-color: #157290;
+    background-position: 0 -25px;
+	border-color: #126E90;
+}
+input[disabled].button {
+	background: url(img/buttonDisabled.png) repeat-x;
+	border: 1px solid #5d5d5d;
+	cursor: default;
+}
+input[disabled].button:active {
+	top:0px;
+	position: relative;	
+}
+
+fieldset input.right {
+    margin-bottom: 8px;
+    margin-right: 35px;
+}
+/* INPUT.GLASS
+---------------------------------------- */
+input.glass {
+    background: url(img/glass.png) repeat-x #FFF;
+	border: 1px solid #E1E1E1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 1px 1px #F0F0F0;
+    -moz-box-shadow: 0 1px 1px #F0F0F0;
+    -webkit-box-shadow: 0 1px 1px #F0F0F0;
+	color: #787878;
+    cursor: pointer;
+    display: inline-block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+    height: 27px;
+    margin-right: 12px;
+    padding: 0 9px 1px 9px;
+    text-shadow: 1px 1px 1px #FFF;
+    text-transform: uppercase;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+input.glass:active {
+    position: relative;
+	top: 1px;
+}
+input.glass:hover {
+    background-color: #EBEBEB;
+    background-position: 0 -25px;
+	border-color: #C8C8C8;
+	color: #505050;
+}
+
+/* FOOTER
+---------------------------------------- */
+#footer {
+    background: url(img/footer.png) repeat-x #FFF;
+    float: left;
+    padding-top: 32px;
+    width: 980px;
+}
+#footer h1 {
+    float: left;
+    padding: 0 42px 76px 29px;
+    width: 109px;
+}
+#footer h1 a {
+    background: url(img/alberta.png) no-repeat;
+    display: block;
+    height: 32px;
+    width: 109px;
+}
+#footer h1 a span {
+    display: none;
+}
+#footer ul {
+    float: left;
+    font-size: 11px;
+    line-height: 24px;
+    width: 800px;
+}
+#footer ul li {
+    color: #FFF;
+    float: left;
+    padding-right: 20px;
+}
+#footer ul li a {
+    color: #FFF;
+}
+#footer ul li a:hover {
+    color: #CCC;
+}
+
+#footer #fasd-logo {
+	background: url(img/fasd_logo.png) no-repeat;
+	float: right;
+	height: 109px;
+    margin: -65px 17px 0 0;
+    width: 144px;
+}
+
+/* CUSTOM RICHFACES TABLE
+---------------------------------------- */
+.table-header {
+	font-weight: bold;	
+}
+.dr-table-sortable-header {
+	font-weight: bold;
+}
+.rich-sort-icon {
+	display: inline;	
+	margin-top: -2px;
+}
+.rich-filter-input {
+	width: 100px;
+}
+.rich-table-subheadercell  {
+	white-space: normal;
+	line-height: 1;
+	text-align: left;
+}
+.rich-table-cell, 
+#content div.table table.inputForm tr td {
+	border:none;	
+	border-bottom: 1px solid #EEE;
+	text-align: center;
+}
+
+#content div.table table.inputForm tr td {
+	padding: 8px 8px 4px 8px;	
+}
+
+.rich-table-leftcell {
+	text-align: left;
+}
+.rich-table-rightcell {
+	text-align: right;
+}
+.rich-table-footercell  {
+	background: white;
+	border:none;
+	border-bottom: 1px solid #EEE;	
+}
+.rich-table-footer {
+	border: none;	
+}
+
+/* CUSTOM RICHFACES DATASCROLLER
+---------------------------------------- */
+.rich-dtascroller-table {
+	border-collapse: collapse;
+	border-spacing: 0;	
+}
+.rich-datascr-button {
+	border: none;
+	background: transparent;
+}
+.rich-datascr-act,
+.rich-datascr-inact {
+	vertical-align: middle;
+	border:none;
+}
+.pages-label {
+	padding-right: 270px;
+	padding-left: 270px;
+	color: #026890;
+    line-height: 27px;
+    text-align: center;
+}
+
+.pagerButton {
+    background: url(img/glass.png) repeat-x #FFF;
+	border: 1px solid #E1E1E1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0 1px 1px #F0F0F0;
+    -moz-box-shadow: 0 1px 1px #F0F0F0;
+    -webkit-box-shadow: 0 1px 1px #F0F0F0;
+	color: #787878;
+    cursor: pointer;
+    display: inline-block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 24px;
+    margin-right: 12px;
+    padding: 0 9px 0px 9px;
+    text-shadow: 1px 1px 1px #FFF;
+    text-transform: uppercase;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
+.pagerButton:active {
+    position: relative;
+	top: 1px;
+}
+.pagerButton:hover {
+    background-color: #EBEBEB;
+    background-position: 0 -25px;
+	border-color: #C8C8C8;
+	color: #505050;
+}
+
+/* CUSTOM RICHFACES MODAL PANEL
+---------------------------------------- */
+.rich-mp-content{
+	border: 5px solid #DEDEDE;
+}
+.rich-mpnl-shadow {
+	background-color: transparent;
+}
+.rich-mpnl-body {
+	background-color: white;
+}
+.rich-mpnl-mask-div {
+	background-color: black;
+	opacity: .25;
+	filter: alpha(opacity=25); 
+}
+div.popup-buttons {
+	clear: both;
+	padding: 12px 0 0 0px;
+	width: 550px;
+}
+
+div.popup-headline-div dl {
+	width: 551px !important;
+	font-size: 13px;
+}
+
+#headline.popup-headline-div dt {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+div.popup-headline-div {
+	width: 265px !important;
+}
+
+div.popup-content-div,
+div.popup-headline-div {
+	width: 550px !important;
+}
+div.popup-content-div {
+	padding-top: 15px !important;	
+}
+
+div.popup-search-content-div,
+div.popup-search-headline-div,
+div.popup-search-headline-div dl {
+	width: 845px !important;
+}
+div.popup-search-headline-div dd {
+	float: left !important;
+}
+div.popup-search-no-results {
+	padding: 24px;	
+}
+
+h2.popup-h2 {
+    color: #414770;
+    float: left;
+    font-size: 15px;
+    padding: 0 0 5px 0 !important;
+    line-height: 32px !important;
+    width: auto;
+}
+.scrollable {
+	overflow-y: auto;  
+	width:487px;;  
+	height:465px;  
+}
+
+/* SELECT CLAIM PERIOD
+---------------------------------------- */
+#selectClaimPeriod {
+	padding: 10px 20px 0 20px;
+	border: 3px solid #DDD;
+	width: 170px;
+	background: url(img/bg.png) top left repeat-x;
+}
+
+#selectClaimPeriod h2 {
+    color: white;
+    font-size: 19px;
+    margin-left: -2px;
+    width: 175px;
+}
+
+#selectClaimPeriod div.buttons {
+	 padding: 25px 0 20px;	
+}
+
+#selectClaimPeriod input.glass {
+	font-size: 10.5px;
+	width: 100%;
+	color: #326F8D;
+	height: 25px;
+}
+
+
+/* RICHFACES COMBO BOX 
+---------------------------------------- */
+#richComboBox {
+	width: 100%;
+	padding-top: 20px;	
+}
+
+#richComboBox .rich-combobox-font, #richComboBox input.rich-combobox-font,
+#richComboBox input.rich-combobox-font-inactive, #richComboBox .rich-combobox-font-inactive,
+#richComboBox input.rich-combobox-font-disabled, #richComboBox .rich-combobox-font-disabled {
+	font-size: 17px;
+    height: 24px;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: none;
+}
+
+#richComboBox input.rich-combobox-input, 
+#richComboBox input.rich-combobox-input-disabled, 
+#richComboBox input.rich-combobox-input-inactive,
+#richComboBox input.rich-combobox-list-decoration {
+	width: 155px !important;
+	text-align: center;
+}
+
+#richComboBox input.rich-combobox-button,
+#richComboBox input.rich-combobox-button-inactive,
+#richComboBox input.rich-combobox-button-disabled {
+	margin-right: -21px;	
+}
+
+/* INCOMPLETE CLAIMS
+---------------------------------------- */
+#incompleteClaims {
+	float: none !important;	
+}
+
+#incompleteClaims h2 {
+	color: #414770;
+    font-size: 19px;
+    padding: 0 0 10px 13px;
+}
+
+#incompleteClaims .pages-label {
+	padding-right: 185px;
+	padding-left: 175px;
+	color: #026890;
+    line-height: 27px;
+    text-align: center;
+}
+
+/* SEARCH POPUP TABLE
+---------------------------------------- */
+#searchPopupTable {
+	float: none !important;	
+}
+
+#searchPopupTable h2 {
+	color: #414770;
+  	font-size: 17px;
+    padding: 0 0 9px;
+    text-align: left;
+}
+
+#searchPopupTable .pages-label {
+	padding-right: 185px;
+	padding-left: 175px;
+	color: #026890;
+    line-height: 27px;
+    text-align: center;
+}
+
+/* NEW CLAIM TABLE
+---------------------------------------- */
+#newClaimTable .rich-table {
+	margin-left: 15px;
+}
+
+#newClaimTable td {
+	vertical-align: top !important;	
+}
+
+/* SUBMIT CLAIM PAGE 
+---------------------------------------- */
+#summaryReview #inputs {
+    width: 437px;
+     padding-left: 20px;
+}
+#summaryReview #inputs dl dt {
+	width: 190px;	
+}
+#summaryReview #inputs dl {
+	padding: 5px 0;	
+}
+
+/* INNER SPLIT HEADLINE 
+---------------------------------------- */
+#innerSplitHeadline {
+    background: #FFF;
+    float: left;
+    padding: 0 20px;
+}
+#innerSplitHeadline dl {
+    border-bottom: 2px solid #BED600;
+    float: left;
+    width: 437px;
+}
+#innerSplitHeadline dl dt {
+    float: left;
+    padding-left: 12px;
+}
+#innerSplitHeadline h2 {
+    color: #414770;
+    float: left;
+    font-size: 21px;
+    line-height: -1px;
+    padding: 0 10px 3px 0;
+}
+
+/* SUBMIT CLAIM PAGE REVIEW HOURS
+---------------------------------------- */
+#reviewHours {
+	margin-left: -17px;
+}
+
+/* INNER HEADLINE
+---------------------------------------- */
+#innerHeadline {
+    background: #FFF;
+    float: left;
+    padding: 0 20px;
+    width: 916px
+}
+#innerHeadline dl {
+    border-bottom: 2px solid #BED600;
+    float: left;
+    width: 899px;
+}
+#innerHeadline dl dt {
+    float: left;
+    padding-left: 12px;
+}
+#innerHeadline h2 {
+    color: #414770;
+    float: left;
+    font-size: 21px;
+    line-height: -1px;
+    padding: 29px 10px 3px 0;
+}
+
+/* CLAIM SUBMITTED 
+---------------------------------------- */
+#claimSubmitted {
+	padding-bottom: 20px;		
+}
+#claimSubmitted #inputs p {
+	padding: 0 15px;	
+	border: none;
+}
+
+#claimSubmitted #inputs #report {
+	padding: 10px 15px 20px;
+}
+
+/* CLAIM STATISTICS 
+---------------------------------------- */
+
+.claimStatisticsTextLabel {
+	width:40%;		
+}
+
+/* ADOBE IMAGE 
+---------------------------------------- */
+#adobeImage {
+	padding: 0 15px;	
+}
+
+#adobeImage h1 {
+	margin-top: 5px;
+    padding-bottom: 25px;
+}
+
+#adobeImage a{
+    background: url(img/get_adobe_reader.png) no-repeat;
+    padding: 12px 79px;
+}
+
+/* DOCUMENT
+---------------------------------------- */
+#document {
+	padding: 0 40px;	
+}
+
+#document h2 {
+	color: #414770;
+    font-size: 18px;
+    padding-bottom: 15px;
+    text-decoration: underline;
+}
+
+#document p {
+	padding-bottom: 30px;	
+}
+/* TEXT
+---------------------------------------- */
+#declarationText p {
+	margin-top: 50px;
+    padding: 10px 40px;
+}
+
+#reminderText p {
+    padding: 10px 20px;
+    font-size: 13.3333px;
+    text-align: left;
+    width: 300px;
+}
+
+#confirmation {
+	margin: 1em auto;
+    width: 390px;
+    font-weight: bold;
+}
+
+#declarationText #confirmation input {
+}
+
+/* TOOL TIPS
+---------------------------------------- */
+span.rich-tool-tip {
+	width: 350px !important;
+	white-space: normal;	
+}
+
+/* CUSTOM
+---------------------------------------- */
+div.buttons {
+    width: 100%;
+    padding: 9px;
+}
+
+.left-aligned {
+	text-align: left;
+	padding-left: 13px;
+}
+
+.right {
+	float: right;	
+}
+
+.left {
+	float: left;	
+}
+
+div.centered {
+	text-align: center;
+}
+
+.center {
+	margin: 0 auto;	
+}
+
+.prevent-claim-submit {
+	font-weight: bold;	
+}
+
+.bold {
+	font-weight: bold;	
+}
+
+.border-none {
+	border: none !important;
+}
+
+#content p.info {
+	padding: 0 0 0 15px;
+}
+
+.presentingIssueNameLabel {
+	width: 175px !important;
+}
+
+.presentingIssueStatusLabel {
+	width: 180px !important;	
+}
+
+/* TEXT
+---------------------------------------- */
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-medium-size {
+	font-size: 14px;
+}
+
+/* 
+ * Donot remove the double space between rich-table-cell and a
+ */
+td.dr-table-cell a,
+td.rich-table-cell  a {
+	padding: 0 2px;	
+} 
+/* RICHFACES LIST SHUTTLE CUSTOM STYLE
+---------------------------------------- */
+#content #clientList {
+    padding-left: 55px;
+    width: 843px;
+    
+}
+#content #clientList table.rich-list-shuttle {
+	margin: 15px auto;
+	width: 90%;
+}
+#content #clientList table.rich-list-shuttle tr td {
+	vertical-align: top;
+}
+#content #clientList div.rich-shuttle-source-items, 
+#content #clientList div.rich-shuttle-target-items {
+	width: 340px;	
+}
+#content #clientList div.rich-shuttle-controls {
+    padding: 0 12px 5px;
+}
+#content #clientList img {
+    display: inline-block;
+}
+
+#content #clientList table.rich-shuttle-body {
+	width: 100% !important;
+}
+#content #clientList div.rich-shuttle-list-content {
+	width: 100% !important;	
+}
+
+.usingThisSite h2 {
+    font-size: 17px;
+    text-decoration: underline;
+}
+
+.inactiveDate {
+	background-color: gray;
+}
