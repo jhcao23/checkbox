@@ -47,7 +47,7 @@ Select checkbox you need:</label><table id="j_id18:caregiverSupportMenu">
 <input name="j_id18:caregiverSupportMenu" id="j_id18:caregiverSupportMenu:0" value="0" onchange="checkboxChange(this.id, 'otherText')" type="checkbox"><label for="j_id18:caregiverSupportMenu:0"> Parent1</label></td>
 	</tr>
 	<tr id="aaa7">
-<td class="pos_right">
+<td>
 <input name="j_id18:caregiverSupportMenu" id="j_id18:caregiverSupportMenu:6" value="6" onchange="checkboxChange(this.id, 'otherText')" type="checkbox"><label for="j_id18:caregiverSupportMenu:6"> - other</label></td>
 	</tr>		
 	<tr id="aaa2">
@@ -55,11 +55,11 @@ Select checkbox you need:</label><table id="j_id18:caregiverSupportMenu">
 <input name="j_id18:caregiverSupportMenu" id="j_id18:caregiverSupportMenu:1" value="1" onchange="checkboxChange(this.id, 'otherText')" type="checkbox"><label for="j_id18:caregiverSupportMenu:1"> Parent2</label></td>
 	</tr>
 	<tr id="aaa3">
-<td class="pos_right">
+<td>
 <input name="j_id18:caregiverSupportMenu" id="j_id18:caregiverSupportMenu:2" value="2" onchange="checkboxChange(this.id, 'otherText')" type="checkbox"><label for="j_id18:caregiverSupportMenu:2"> - child1</label></td>
 	</tr>
 	<tr  id="aaa4">
-<td class="pos_right">
+<td>
 <input name="j_id18:caregiverSupportMenu" id="j_id18:caregiverSupportMenu:3" value="3" onchange="checkboxChange(this.id)" type="checkbox"><label for="j_id18:caregiverSupportMenu:3"> - child2</label></td>
 	</tr>
 	<tr id="aaa5">
@@ -95,5 +95,22 @@ If Other, please specify:</label></td>
                  
 	
 		</div>
-   
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+   	$j(document).ready(function(){
+   		// alert('hallo')
+   		// jQuery("table").find("input:checkbox").next("label:contains('- ')").closest("td").addClass("pos_right");
+   		$j("table").find("input:checkbox").next("label").filter(function(index, element){   			
+   			// if($j.trim($j(this).text()).toLowerCase().charAt(0)=="-"){
+   			// 	console.log($j(this).text().toLowerCase() + "::YES");
+   			// }else{
+   			// 	console.log($j(this).text().toLowerCase() + "::NO");
+   			// }
+   			return $j.trim($j(this).text()).toLowerCase().charAt(0)=="-";
+   		}).closest("td").addClass("pos_right");
+   		$j("table").find("input:checkbox").click(function(){
+   			$j(this).blur();
+   		});
+   });
+</script>
 </body></html>
